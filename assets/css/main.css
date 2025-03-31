@@ -1878,9 +1878,6 @@ input, select, textarea {
 		body.is-touch .main {
 			background-attachment: scroll !important;
 		}
-
-	
-		}
 /* Reset basic styles */
 * {
     margin: 0;
