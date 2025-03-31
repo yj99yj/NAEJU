@@ -514,47 +514,6 @@ input, select, textarea {
 		letter-spacing: 0.025em;
 	}
 
-		@media screen and (max-width: 1920px) {
-
-			body, input, textarea, select {
-				font-size: 17pt;
-			}
-
-		}
-
-		@media screen and (max-width: 1680px) {
-
-			body, input, textarea, select {
-				font-size: 15pt;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			body, input, textarea, select {
-				font-size: 13pt;
-			}
-
-		}
-
-		@media screen and (max-width: 1000px) {
-
-			body, input, textarea, select {
-				font-size: 13pt;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			body, input, textarea, select {
-				font-size: 12pt;
-				line-height: 1.5em;
-			}
-
-		}
-
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 900;
 		color: inherit;
@@ -572,13 +531,6 @@ input, select, textarea {
 		letter-spacing: -0.05em;
 	}
 
-	@media screen and (max-width: 736px) {
-
-		h2 {
-			font-size: 1.5em;
-		}
-
-	}
 
 	strong, b {
 		font-weight: 900;
@@ -638,19 +590,6 @@ input, select, textarea {
 
 		.box.style2 {
 			padding: 3.5em 2.5em 3.5em 2.5em;
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.box {
-				padding: 1em;
-			}
-
-				.box.style2 {
-					padding: 1.5em 1.25em 1.5em 1.25em;
-					background-color: rgba(255, 255, 255, 0.9);
-				}
-
 		}
 
 /* Button */
@@ -818,31 +757,6 @@ input, select, textarea {
 					width: calc(25% - 0.375em);
 				}
 
-		@media screen and (max-width: 480px) {
-
-			form > .fields {
-				width: calc(100% + 2em);
-				margin: -1em 0 2em -1em;
-			}
-
-				form > .fields > .field {
-					padding: 1em 0 0 1em;
-					width: calc(100% - 1em);
-				}
-
-					form > .fields > .field.half {
-						width: calc(100% - 1em);
-					}
-
-					form > .fields > .field.third {
-						width: calc(100% - 1em);
-					}
-
-					form > .fields > .field.quarter {
-						width: calc(100% - 1em);
-					}
-
-		}
 
 	label {
 		display: block;
@@ -1114,57 +1028,6 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		@media screen and (max-width: 480px) {
-
-			ul.actions:not(.fixed) {
-				-moz-flex-direction: column;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
-				margin-left: 0;
-				width: 100% !important;
-			}
-
-				ul.actions:not(.fixed) li {
-					-moz-flex-grow: 1;
-					-webkit-flex-grow: 1;
-					-ms-flex-grow: 1;
-					flex-grow: 1;
-					-moz-flex-shrink: 1;
-					-webkit-flex-shrink: 1;
-					-ms-flex-shrink: 1;
-					flex-shrink: 1;
-					padding: 1em 0 0 0;
-					text-align: center;
-					width: 100%;
-				}
-
-					ul.actions:not(.fixed) li > * {
-						width: 100%;
-					}
-
-					ul.actions:not(.fixed) li:first-child {
-						padding-top: 0;
-					}
-
-					ul.actions:not(.fixed) li input[type="submit"],
-					ul.actions:not(.fixed) li input[type="reset"],
-					ul.actions:not(.fixed) li input[type="button"],
-					ul.actions:not(.fixed) li button,
-					ul.actions:not(.fixed) li .button {
-						width: 100%;
-					}
-
-						ul.actions:not(.fixed) li input[type="submit"].icon:before,
-						ul.actions:not(.fixed) li input[type="reset"].icon:before,
-						ul.actions:not(.fixed) li input[type="button"].icon:before,
-						ul.actions:not(.fixed) li button.icon:before,
-						ul.actions:not(.fixed) li .button.icon:before {
-							margin-left: -0.5rem;
-						}
-
-		}
-
 /* Icons */
 
 	ul.icons {
@@ -1405,27 +1268,6 @@ input, select, textarea {
 			opacity: 1.0 !important;
 		}
 
-		@media screen and (max-width: 736px) {
-
-			.poptrox-popup .nav-next:before,
-			.poptrox-popup .nav-previous:before {
-				width: 48px;
-				height: 32px;
-				background-size: contain;
-				margin: -16px 0 0 0;
-			}
-
-			.poptrox-popup .closer:before {
-				right: 12px;
-				top: 12px;
-				width: 20px;
-				height: 20px;
-				box-shadow: inset 0 0 0 1px #fff;
-				background-size: contain;
-				opacity: 0.65;
-			}
-
-		}
 
 /* Gallery */
 
@@ -1816,25 +1658,6 @@ input, select, textarea {
 				transform: translateY(7em);
 			}
 
-		@media screen and (max-width: 480px) {
-
-			.gallery {
-				-moz-flex-wrap: nowrap;
-				-webkit-flex-wrap: nowrap;
-				-ms-flex-wrap: nowrap;
-				flex-wrap: nowrap;
-				-moz-flex-direction: column;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
-			}
-
-				.gallery article {
-					width: 100%;
-				}
-
-		}
-
 /* Header */
 
 	#header {
@@ -1889,44 +1712,11 @@ input, select, textarea {
 						padding: 0 0.5em 0 0.5em;
 						outline: 0;
 					}
-
-		@media screen and (max-width: 736px) {
-
-			#header {
-				height: 2.5em;
-				line-height: 2.5em;
-			}
-
-				#header h1 {
-					text-align: center;
-					position: relative;
-					left: 0;
-					top: 0;
-					height: 2.5em;
-					line-height: 2.5em;
-				}
-
-					#header h1 a {
-						font-size: 1em;
-					}
-
-				#header nav {
-					display: none;
-				}
-
-		}
-
+	
 	body {
 		padding-top: 3em;
 	}
 
-		@media screen and (max-width: 736px) {
-
-			body {
-				padding-top: 2.5em;
-			}
-
-		}
 
 /* Main */
 
@@ -2089,83 +1879,7 @@ input, select, textarea {
 			background-attachment: scroll !important;
 		}
 
-		@media screen and (max-width: 1920px) {
-
-			.main.style2 .content {
-				width: 40%;
-			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.main.style2 .content {
-				width: 50%;
-			}
-
-		}
-
-		@media screen and (max-width: 1000px) {
-
-			.main.style2 .content {
-				width: 60%;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.main > .content br {
-				display: none;
-			}
-
-			.main.fullscreen {
-				height: auto !important;
-			}
-
-			.main.style1 {
-				padding: 4em 15px 4em 15px;
-			}
-
-				.main.style1 h2 {
-					font-size: 3em;
-				}
-
-			.main.style2 {
-				padding: 6em 15px 6em 15px;
-			}
-
-				.main.style2:before, .main.style2:after {
-					display: none !important;
-				}
-
-				.main.style2 .button.anchored {
-					display: none;
-				}
-
-				.main.style2 .content {
-					width: 100%;
-					max-width: 100%;
-					text-align: center;
-					-moz-transform: none;
-					-webkit-transform: none;
-					-ms-transform: none;
-					transform: none;
-				}
-
-			.main.style3 {
-				text-align: center;
-				padding: 3em 10px 3em 10px;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.main > .content {
-				max-width: calc(100% - 1.5em);
-			}
-
+	
 		}
 /* Reset basic styles */
 * {
@@ -2431,8 +2145,6 @@ form input[type="submit"]:hover {
     color: #ffd700; /* Change icon color on hover */
 }
 
-
-
 /* Responsive Styles for Footer */
 @media screen and (max-width: 1000px) {
     #footer {
@@ -2440,27 +2152,211 @@ form input[type="submit"]:hover {
         justify-content: center;
         line-height: 1.5em;
         text-align: center;
-        padding: 2em 1em 2em 1em;
+        padding: 2em 1em;
     }
 
     #footer > * {
         margin: 0 0 1em 0;
     }
+
+    .main.style2 .content {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 736px) {
+    /* Footer Menu */
     #footer ul.menu li {
         border-left: none;
         display: block;
-        margin: 0.25em 0 0 0;
-        padding: 0.25em 0 0 0;
+        margin: 0.25em 0 0;
+        padding: 0.25em 0;
     }
 
     #footer ul.menu li:first-child {
         margin-top: 0;
         padding-top: 0;
     }
+
+    /* Header */
+    #header {
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+
+    #header h1 {
+        text-align: center;
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+
+    #header h1 a {
+        font-size: 1em;
+    }
+
+    #header nav {
+        display: none;
+    }
+
+    body {
+        padding-top: 2.5em;
+    }
+
+    /* Main Content */
+    .main.style1 {
+        padding: 4em 15px;
+    }
+
+    .main.style1 h2 {
+        font-size: 3em;
+    }
+
+    .main.style2 {
+        padding: 6em 15px;
+    }
+
+    .main.style2:before,
+    .main.style2:after {
+        display: none;
+    }
+
+    .main.style2 .button.anchored {
+        display: none;
+    }
+
+    .main.style2 .content {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        transform: none;
+    }
+
+    .main.style3 {
+        text-align: center;
+        padding: 3em 10px;
+    }
+
+    /* Gallery */
+    .gallery {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .gallery article {
+        width: 100%;
+    }
+
+    /* Actions */
+    ul.actions:not(.fixed) {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 1em 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li > * {
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li:first-child {
+        padding-top: 0;
+    }
+
+    ul.actions:not(.fixed) li input[type="submit"],
+    ul.actions:not(.fixed) li input[type="reset"],
+    ul.actions:not(.fixed) li input[type="button"],
+    ul.actions:not(.fixed) li button,
+    ul.actions:not(.fixed) li .button {
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li input[type="submit"].icon:before,
+    ul.actions:not(.fixed) li input[type="reset"].icon:before,
+    ul.actions:not(.fixed) li input[type="button"].icon:before,
+    ul.actions:not(.fixed) li button.icon:before,
+    ul.actions:not(.fixed) li .button.icon:before {
+        margin-left: -0.5rem;
+    }
+
+    /* Main Content Adjustments */
+    .main > .content {
+        max-width: calc(100% - 1.5em);
+    }
 }
+
+@media screen and (max-width: 480px) {
+    ul.actions:not(.fixed) {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 1em 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li > * {
+        width: 100%;
+    }
+
+    ul.actions:not(.fixed) li:first-child {
+        padding-top: 0;
+    }
+
+    ul.actions:not(.fixed) li input[type="submit"],
+    ul.actions:not(.fixed) li input[type="reset"],
+    ul.actions:not(.fixed) li input[type="button"],
+    ul.actions:not(.fixed) li button,
+    ul.actions:not(.fixed) li .button {
+        width: 100%;
+    }
+
+    .gallery {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .gallery article {
+        width: 100%;
+    }
+
+    .main > .content {
+        max-width: calc(100% - 1.5em);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main.style2 .content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .main.style2 .content {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .main.style2 .content {
+        width: 40%;
+    }
+}
+
 
 /* Section Backgrounds */
 #intro {
