@@ -1328,6 +1328,41 @@ input, select, textarea {
     }
 }
 
+#navbar ul {
+	display: none;  /* 네비게이션 바 숨기기 */
+	flex-direction: column;
+	background-color: #fff;
+	width: 100%;
+}
+
+#navbar ul li {
+	padding: 1em;
+	text-align: center;
+	width: 100%;
+}
+
+/* 햄버거 메뉴 표시 */
+.hamburger {
+	display: block;
+	cursor: pointer;
+	padding: 10px;
+}
+
+/* 햄버거 메뉴 */
+.hamburger .bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	margin: 5px auto;
+	transition: all 0.3s ease;
+}
+
+/* 햄버거 메뉴 클릭 시 네비게이션 바 보이게 하기 */
+.hamburger.active + #navbar ul {
+	display: block;
+}
+
 
 @media screen and (max-width: 480px) {
     .gallery article {
@@ -2009,11 +2044,15 @@ body {
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: space-around;
+    padding: 0;
 }
 
 nav ul li {
     margin-left: 20px;
+	list-style-type: none;
 }
+
 
 nav ul li a {
     text-decoration: none;
