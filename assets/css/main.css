@@ -1270,39 +1270,48 @@ input, select, textarea {
 
 
 /* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* 여러 줄로 배치 */
+    justify-content: space-between; /* 이미지 사이에 균등한 간격을 둡니다. */
+    width: 100%; /* 전체 너비 */
+    margin: 0 auto 2em auto;
+    box-sizing: border-box; /* padding과 border가 요소 크기에 포함되도록 설정 */
+    padding: 0 10px; /* 양옆에 간격을 추가하여 이미지 간격이 유지되도록 설정 */
+}
 
-	.gallery {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
-		width: 45em;
-		max-width: 100%;
-		margin: 0 auto 2em auto;
-	}
+/* 개별 이미지 항목 */
+.gallery article {
+    width: 24%; /* 4개의 이미지를 한 줄에 배치하려면 24% */
+    margin-bottom: 1em; /* 이미지들 사이에 세로 간격 추가 */
+    opacity: 1.0;
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateX(0);
+    position: relative;
+    box-sizing: border-box; /* padding과 border 포함 */
+}
 
-		.gallery article {
-			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
-			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-			transition: transform 1s ease, opacity 1s ease;
-			-moz-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			-ms-transform: translateX(0);
-			transform: translateX(0);
-			width: 50%;
-			position: relative;
-			opacity: 1.0;
-		}
+/* 이미지 스타일 */
+.gallery article .image {
+    margin: 0;
+    display: block;
+    width: 100%; /* 부모 요소에 맞게 이미지 크기를 설정 */
+    height: auto; /* 이미지 비율을 유지 */
+}
 
-			.gallery article .image {
-				margin: 0;
-				display: block;
-			}
+/* 반응형 스타일 (모바일에서 2개씩 보기 위해) */
+@media screen and (max-width: 768px) {
+    .gallery article {
+        width: 48%; /* 모바일에서 두 개씩 보여주기 위해 48%로 설정 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery article {
+        width: 98%; /* 모바일에서 한 줄에 하나만 보여주기 위해 98%로 설정 */
+    }
+}
+
 
 			.gallery article:nth-last-child(1n) {
 				-moz-transition-delay: 0.05s;
@@ -1712,6 +1721,14 @@ input, select, textarea {
 						padding: 0 0.5em 0 0.5em;
 						outline: 0;
 					}
+
+					/* 호버 효과 */
+#header ul li a:hover {
+    color: #ffd700; /* 글자 색 변경 */
+    background-color: #444; /* 배경 색 변경 */
+    padding: 0.5em 1em; /* 패딩 증가로 버튼처럼 보이게 */
+    border-radius: 5px; /* 둥근 모서리 */
+}
 	
 	body {
 		padding-top: 3em;
@@ -1902,10 +1919,63 @@ body {
     justify-content: space-between;
 }
 
-#header h1 {
+/* 기본 네비게이션 바 스타일 */
+#header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+	background-color: #333;
+	color: white;
+  }
+  
+  #header .logo a {
+	color: white;
+	font-size: 1.5em;
+	text-decoration: none;
+  }
+
+  #header ul {
+    list-style: none;
     display: flex;
-    align-items: center;
-    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+#header ul li {
+    margin-left: 2em;
+}
+
+#header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+  #header ul.menu {
+	list-style: none;
+	display: flex;
+	margin: 0;
+  }
+  
+  #header ul.menu li {
+	margin-left: 2em;
+  }
+  
+  #header ul.menu li a {
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+	padding: 0.5em;
+	display: inline-block;
+  }
+
+#header h1 {
+	margin: 0;
+    font-size: 1.5em;
+    color: white;
 }
 
 #header h1 img {
@@ -1932,6 +2002,24 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffd700;
 }
+
+/* 햄버거 메뉴 */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	justify-content: space-around;
+	width: 25px;
+	height: 25px;
+	color: white;
+  }
+  
+  .hamburger span {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	border-radius: 5px;
+  }
 
 /* Sections */
 section.main {
@@ -2004,13 +2092,15 @@ section p {
 
 /* Button */
 .button {
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #ffd700;
     color: black;
+	border: none;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 0.9em;
     transition: background-color 0.3s ease;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -2163,6 +2253,23 @@ form input[type="submit"]:hover {
 
 @media screen and (max-width: 736px) {
     /* Footer Menu */
+	#header ul {
+        display: none;  /* 기본적으로 메뉴 숨기기 */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 1em 0;
+    }
+
+	#header ul li {
+        margin: 1em 0;
+        text-align: center;
+    }
+
+
     #footer ul.menu li {
         border-left: none;
         display: block;
@@ -2176,7 +2283,61 @@ form input[type="submit"]:hover {
     }
 
     /* Header */
+	#header nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1em;
+		background-color: #333;
+		color: white;
+    }
+
+	#header .logo a {
+		color: white;
+		font-size: 1.5em;
+		text-decoration: none;
+	  }
+
+	  
+#header ul.menu {
+	display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    padding: 1em 0;
+  }
+  
+  #header ul.menu.active {
+    display: flex;
+  }
+
+  #header ul.menu li {
+	margin: 1em 0;
+	text-align: center;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+
+  #header ul.menu li a {
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+	padding: 0.5em;
+	display: inline-block;
+  }
+
+  
+  #header ul.active {
+	display: flex;  /* 메뉴가 열릴 때 표시 */
+}
+  
     #header {
+        padding-top: 0.5em; /* 네비게이션 바 아래에 여백 추가 */
         height: 2.5em;
         line-height: 2.5em;
     }
@@ -2192,10 +2353,6 @@ form input[type="submit"]:hover {
 
     #header h1 a {
         font-size: 1em;
-    }
-
-    #header nav {
-        display: none;
     }
 
     body {
@@ -2238,12 +2395,20 @@ form input[type="submit"]:hover {
 
     /* Gallery */
     .gallery {
-        flex-wrap: nowrap;
-        flex-direction: column;
+		display: flex;
+        flex-wrap: wrap;  /* 이미지를 여러 줄로 배치 */
+        justify-content: center;
+        flex-direction: row;
     }
 
     .gallery article {
-        width: 100%;
+        width: 48%;
+		padding: 1em; 
+    }
+
+	.gallery img {
+        width: 100%;  /* 이미지의 크기를 부모 요소에 맞게 조정 */
+        height: auto;  /* 이미지 비율 유지 */
     }
 
     /* Actions */
@@ -2323,7 +2488,7 @@ form input[type="submit"]:hover {
     }
 
     .gallery {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: column;
     }
 

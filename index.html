@@ -10,20 +10,26 @@
   </head>
   <body class="is-preload">
     <header id="header">
-      <h1>
-        <img src="images/thumbs/logo.png" alt="logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" loading="lazy"> Naeju
-      </h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#one">About</a></li>
-						<li><a href="#two">Our Awards</a></li>
-						<li><a href="#work">Tours</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<button onclick="location.href='index_zh.html'">中文</button>
-					</ul>
-				</nav>
-			</header>
+		<h1>
+			<img src="images/thumbs/logo.png" alt="logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" loading="lazy"> Naeju
+		</h1>
+		<nav>
+			<ul id="menu-list">
+				<li><a href="#intro">Home</a></li>
+				<li><a href="#one">About</a></li>
+				<li><a href="#two">Awards</a></li>
+				<li><a href="#work">Tours</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><button onclick="location.href='index_zh.html'">中文</button></li>
+			</ul>
+			<div class="hamburger" id="hamburger-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+	</header>
+	
 
 		<!-- Intro -->
 			<section id="intro" class="main style1 dark fullscreen">
@@ -66,7 +72,7 @@
 			</section>
 
 		<!-- Work -->
-			<section id="work" class="main style3 primary">
+			<section id="work" class="main style2 primary">
 				<div class="content">
 					<header>
 						<h2>tours</h2>
@@ -107,8 +113,8 @@
 									Private car service to the airport with VIP lounge access." alt="" loading="lazy"/>Day 5: Departure</a>
 							</article>
 						</div>
-
 				</div>
+				<a href="#contact" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Contact -->
@@ -138,20 +144,15 @@
 
 				<!-- Icons -->
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="instagram@laizhutour" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 
 				<!--contact-->	
           			<div class="d-flex justify-content-start">
           			    <p class="me-4 mb-2"><i class="fas fa-home me-3"></i>(#411), 534 Seobusaet-gil, Geumcheon-gu, Seoul </p>
             			<p class="me-4 mb-2"><i class="fas fa-envelope me-3"></i> cj8880@naver.com</p>
-            			<p class="me-4 mb-2"><i class="fas fa-phone me-3"></i> +01 234 567 88</p>
-            			<p class="me-4 mb-2"><i class="fas fa-print me-3"></i> +01 234 567 89</p>
+            			<p class="me-4 mb-2"><i class="fas fa-phone me-3"></i> +02 774 8986</p>
+            			<p class="me-4 mb-2"><i class="fas fa-print me-3"></i> +02 774 8987</p>
          			</div>
 				<!-- Menu -->
 					<ul class="menu">
@@ -169,6 +170,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// 햄버거 아이콘 클릭 시 메뉴 토글
+				const hamburger = document.getElementById('hamburger-icon');
+				const menu = document.getElementById('menu-list');
+			
+				hamburger.addEventListener('click', () => {
+					menu.classList.toggle('active'); // 메뉴 토글
+				});
+			</script>
+			
+			  
 
 	</body>
 </html>

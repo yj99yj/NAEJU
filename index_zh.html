@@ -14,7 +14,7 @@
         <img src="images/thumbs/logo.png" alt="logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" loading="lazy"> Naeju
       </h1>
 				<nav>
-					<ul>
+					<ul id="menu-list">
 						<li><a href="#intro">首页</a></li>
 						<li><a href="#one">关于</a></li>
 						<li><a href="#two">奖项</a></li>
@@ -22,6 +22,11 @@
 						<li><a href="#contact">联系我们</a></li>
 						<button onclick="location.href='index.html'">英语</button>
 					</ul>
+					<div class="hamburger" id="hamburger-icon">
+						<span></span>
+            			<span></span>
+           				<span></span>
+					</div>
 				</nav>
 			</header>
 
@@ -121,8 +126,8 @@
 									专车送往机场，提供VIP候机服务。" alt="" loading="lazy"/>第五天：回国</a>
 							</article>
 						</div>
-
 				</div>
+				<a href="#contact" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Contact -->
@@ -151,20 +156,15 @@
 
 				<!-- Icons -->
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="instagram@laizhutour" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 
 				<!--contact-->	
           			<div class="d-flex justify-content-start">
           			    <p class="me-4 mb-2"><i class="fas fa-home me-3"></i>首尔市金泉区西部赛特街534(#411)</p>
             			<p class="me-4 mb-2"><i class="fas fa-envelope me-3"></i> cj8880@naver.com</p>
-            			<p class="me-4 mb-2"><i class="fas fa-phone me-3"></i> +01 234 567 88</p>
-            			<p class="me-4 mb-2"><i class="fas fa-print me-3"></i> +01 234 567 89</p>
+            			<p class="me-4 mb-2"><i class="fas fa-phone me-3"></i> +02 774 8986</p>
+            			<p class="me-4 mb-2"><i class="fas fa-print me-3"></i> +02 774 8987</p>
          			</div>
 				<!-- Menu -->
 					<ul class="menu">
@@ -182,6 +182,17 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				// 햄버거 아이콘 클릭 시 메뉴 토글
+				const hamburger = document.getElementById('hamburger-icon');
+				const menu = document.getElementById('menu-list');
+			
+				hamburger.addEventListener('click', () => {
+					menu.classList.toggle('active'); // 메뉴 토글
+				});
+			</script>
+			
+			  
 
 	</body>
 </html>
